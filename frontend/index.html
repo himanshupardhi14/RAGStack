@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RAGStack Chatbot</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>RAGStack Chatbot</h1>
+            <button id="toggleTheme">🌙 Dark Mode</button>
+        </div>
+
+        <h2>📄 Upload Document</h2>
+        
+
+        <div class="upload-section">
+            <input type="file" id="file" multiple>
+            <button onclick="uploadDoc()">Upload</button>
+            
+
+        </div>
+        <button id="toggleDocListBtn" onclick="toggleDocList()">📄 Show Documents</button>
+        <ul id="docList" style="display: none;"></ul> 
+        <div id="noDocsMsg" style="margin-top: 10px; color: red;"></div> 
+
+        <h2> Ask a Question❓</h2>
+        <div class="question-section">
+            <input type="text" id="question" placeholder="Type your question here...">
+            <button onclick="startVoice()">🎤</button>
+            <button onclick="ask()">Ask</button>
+        </div>
+
+        <div id="loading" class="hidden">⏳ Typing...</div>
+        <pre id="response" class="response-box"></pre>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

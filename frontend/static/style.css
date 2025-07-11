@@ -1,0 +1,124 @@
+:root {
+    --bg: #ffffff;
+    --text: #2c3e50;
+    --box: #f0f4f8;
+    --primary: #052c46;
+    --highlight: #911010;
+}
+
+body.dark {
+    --bg: #1e1e1e;
+    --text: #ecf0f1;
+    --box: #2c3e50;
+    --primary: #8ab4f8;
+    --highlight: #a30202;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    transition: background 0.5s, color 0.5s;
+}
+
+.container {
+    background: var(--bg);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    transition: background 0.5s, color 0.5s;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1,
+h2 {
+    margin-bottom: 20px;
+}
+
+.upload-section,
+.question-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+input[type="file"],
+input[type="text"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 250px;
+    transition: 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+button {
+    padding: 12px 16px;
+    border: none;
+    background-color: var(--primary);
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: var(--highlight);
+}
+
+.response-box {
+    background-color: var(--box);
+    padding: 20px;
+    border-radius: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    margin-top: 20px;
+    border-left: 5px solid var(--primary);
+}
+
+#loading {
+    margin-top: 20px;
+    font-weight: bold;
+    color: var(--highlight);
+}
+
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    .upload-section,
+    .question-section {
+        flex-direction: column;
+        align-items: stretch;
+        
+    }
+
+    input[type="file"],
+    input[type="text"],
+    button {
+        width: 100%;
+    }
+} 
+ 
